@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Royal Stay Hotel</title>
+  <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; color: #222; line-height: 1.6; }
+
+header { display: flex; justify-content: space-between; align-items: center;
+         padding: 16px 40px; background: #12263f; color: white; }
+nav a { color: white; text-decoration: none; margin-left: 20px; }
+nav a:hover { color: #c9a24a; }
+
+.hero { text-align: center; padding: 120px 20px; color: white; background: #12263f; }
+.hero h1 { max-width: 700px; margin: 0 auto 20px; font-size: 2.4rem; }
+.btn { display: inline-block; padding: 12px 28px; background: #c9a24a;
+       color: #12263f; text-decoration: none; font-weight: bold; border-radius: 4px; }
+
+section { padding: 60px 40px; text-align: center; }
+section h2 { margin-bottom: 28px; color: #12263f; }
+.alt { background: #f2f4f7; }
+
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.card { background: white; border: 1px solid #ddd; border-radius: 8px; padding: 16px; }
+/* Colored box in place of a room photo. Replace with <img> later */
+.pic { height: 140px; background: #12263f; color: #c9a24a; display: flex;
+       align-items: center; justify-content: center; border-radius: 6px; margin-bottom: 12px; }
+
+ul { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+li { background: white; padding: 10px 20px; border-radius: 20px; border: 1px solid #ddd; }
+
+form { max-width: 420px; margin: auto; display: flex; flex-direction: column; gap: 12px; }
+input, select, button { padding: 10px; font-size: 1rem; width: 100%; }
+label { text-align: left; }
+button { background: #12263f; color: white; border: none; cursor: pointer; border-radius: 4px; }
+button:hover { background: #c9a24a; color: #12263f; }
+
+footer { text-align: center; padding: 20px; background: #12263f; color: white; }
+
+@media (max-width: 768px) {
+  header { flex-direction: column; gap: 10px; }
+  nav a { margin: 0 8px; }
+  .hero h1 { font-size: 1.7rem; }
+  section { padding: 40px 20px; }
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Royal Stay</h2>
+    <nav>
+      <a href="#rooms">Rooms</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#booking">Book Now</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>A comfortable stay in the heart of the city</h1>
+    <a class="btn" href="#booking">Book a room</a>
+  </section>
+
+  <!-- ROOM CATEGORIES -->
+  <section id="rooms">
+    <h2>Our Rooms</h2>
+    <div class="cards">
+      <div class="card"><div class="pic">Standard</div><h3>Standard Room</h3><p>1 double bed, AC, TV</p><b>₹2,500 / night</b></div>
+      <div class="card"><div class="pic">Deluxe</div><h3>Deluxe Room</h3><p>King bed, balcony, breakfast</p><b>₹4,000 / night</b></div>
+      <div class="card"><div class="pic">Suite</div><h3>Family Suite</h3><p>2 bedrooms, living area</p><b>₹7,500 / night</b></div>
+    </div>
+  </section>
+
+  <section id="facilities" class="alt">
+    <h2>Facilities</h2>
+    <ul>
+      <li>Free Wi-Fi</li><li>Swimming pool</li><li>Restaurant</li>
+      <li>Parking</li><li>Gym</li><li>24/7 room service</li>
+    </ul>
+  </section>
+
+  <section id="reviews">
+    <h2>Guest Reviews</h2>
+    <div class="cards">
+      <div class="card"><p>"Clean rooms and friendly staff."</p><b>Anil</b></div>
+      <div class="card"><p>"Great breakfast, great pool."</p><b>Divya</b></div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORM -->
+  <section id="booking" class="alt">
+    <h2>Book Your Room</h2>
+    <form>
+      <input type="text" placeholder="Your name" required>
+      <input type="email" placeholder="Email" required>
+      <label>Check-in <input type="date" required></label>
+      <label>Check-out <input type="date" required></label>
+      <select>
+        <option>Standard Room</option>
+        <option>Deluxe Room</option>
+        <option>Family Suite</option>
+      </select>
+      <button type="submit">Book now</button>
+    </form>
+  </section>
+
+  <footer>© 2026 Royal Stay Hotel | Contact: 98765 12345</footer>
+</body>
+</html>
